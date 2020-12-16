@@ -1,6 +1,9 @@
 class Rental < ApplicationRecord
-    validates :boat_name, :customer_name, :date_time, presence: true
+    #validates :boat_name, :customer_name, :date_time, presence: true
     validate :date_time_cannot_be_in_past
+    belongs_to :boat
+    belongs_to :customer 
+    validates_associated :boat, :customer
 
     def date_time_cannot_be_in_past
         if self.date_time < DateTime.now

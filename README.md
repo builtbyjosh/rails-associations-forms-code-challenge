@@ -2,8 +2,13 @@
 
 ## Part 1: Conceptual questions
 1. What’s the difference between form_tag and form_for. When would we use each?
+    - form_tag is for generic form creation
+    - form_for can create a form directly linked to a object model
 2. Why do we use strong_params?
+    - require: key or model
+    - permit: accepted params for creating or updating
 3. What is a partial and how does it improve our code?
+    - partlial pages that can be used across multiple pages.
 
 ## Part 2: Expand and refactor your boat rental app to include some assotiations
 * Rental belongs to Boat
